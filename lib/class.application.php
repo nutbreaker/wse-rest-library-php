@@ -83,7 +83,7 @@ class Application extends Wowza{
 		return $this->name;
 	}
 
-	private function preparePropertiesForRequest(){
+	protected function preparePropertiesForRequest(){
 		$classPropNames = get_class_vars(get_class($this));
 		$props = new \stdClass();
 		foreach($classPropNames as $key=>$val){

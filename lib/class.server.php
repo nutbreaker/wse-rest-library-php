@@ -43,27 +43,4 @@ class Server extends Wowza{
 	public function getRestURI(){
 		return $this->restURI;
 	}
-
-	private function preparePropertiesForRequest(){
-		$classPropNames = get_class_vars(get_class($this));
-		$props = new \stdClass();
-		foreach($classPropNames as $key=>$val){
-			if(isset($this->$key)){
-				if(preg_match("/^(\_)/", $key)){
-					continue;
-				}
-				if(isset($this->_skip[$key])){
-					continue;
-				}
-				$props->$key = $this->$key;
-			}
-		}
-
-		if(count($this->_additional)>0){
-			foreach($this->_additional as $key=>$val){
-				$props->$key=$val;
-			}
-		}
-		return $props;
-	}
 }
