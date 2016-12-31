@@ -70,7 +70,6 @@ class Wowza{
  	}
 
 	protected function sendRequest($props, $entities, $verbType=self::VERB_POST, $queryParams=null){
-            //var_dump($props); die();
 		if(isset($props->restURI) && !empty($props->restURI)){
 			if(count($entities)>0){
 				for($i=0; $i<count($entities); $i++){
