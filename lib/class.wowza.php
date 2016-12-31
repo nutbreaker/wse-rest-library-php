@@ -15,7 +15,7 @@ class Wowza{
 	const VERB_DELETE = "DELETE";
 	const VERB_PUT = "PUT";
 
-	private $useDigest = false;
+	private $useDigest = true;
 	private $host = WOWZA_HOST;
 	private $serverInstance = WOWZA_SERVER_INSTANCE;
 	private $vhostInstance = WOWZA_VHOST_INSTANCE;
@@ -61,15 +61,16 @@ class Wowza{
  	}
 
  	protected function debug($str){
- 		if(DEBUG){
+ 		if(self::DEBUG){
  			if(!is_string($str)){
  				$str = json_encode($str);
  			}
- 			echo $str."\n";
+ 			echo $str."\n\n";
  		}
  	}
 
 	protected function sendRequest($props, $entities, $verbType=self::VERB_POST, $queryParams=null){
+            //var_dump($props); die();
 		if(isset($props->restURI) && !empty($props->restURI)){
 			if(count($entities)>0){
 				for($i=0; $i<count($entities); $i++){

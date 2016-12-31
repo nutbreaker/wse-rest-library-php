@@ -8,12 +8,12 @@
 
 namespace com\wowza;
 class Publisher extends Wowza{
-	private $restURI = "";
-	private $name = "";
-	private $password = "";
+	protected $restURI = "";
+	protected $name = "";
+	protected $password = "";
 
-	private $_skip = array();
-	private $_additional = array();
+        protected $_skip = array();
+	protected $_additional = array();
 
 
 	public function __construct($publisherName=null){

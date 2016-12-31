@@ -8,31 +8,31 @@
 
 namespace com\wowza;
 class Recording extends Wowza{
-	private $restURI = "";
-	private $recordName = "myStream";
-	private $instanceName = "_definst_";
-	private $recorderState = "Waiting for stream";
-	private $defaultRecorder = "true";
-	private $segmentationType = "None";
-	private $outputPath = "";
-	private $baseFile = "myrecord.mp4";
-	private $fileFormat = "MP4";
-	private $fileVersionDelegateName ="com.wowza.wms.livestreamrecord.manager.StreamRecorderFileVersionDelegate";
-	private $fileTemplate = "\${BaseFileName}_\${RecordingStartTime}_\${SegmentNumber}";
-	private $segmentDuration = "900000";
-	private $segmentSize = "10485760";
-	private $segmentSchedule = "0 * * * * *";
-	private $recordData = "true";
-	private $startOnKeyFrame = "true";
-	private $splitOnTcDiscontinuity = "false";
-	private $option = "Version existing file";
-	private $moveFirstVideoFrameToZero = "true";
-	private $currentSize = "0";
-	private $currentDuration = "0";
-	private $recordingStartTime = "";
+	protected $restURI = "";
+	protected $recordName = "myStream";
+	protected $instanceName = "_definst_";
+	protected $recorderState = "Waiting for stream";
+	protected $defaultRecorder = "true";
+	protected $segmentationType = "None";
+	protected $outputPath = "";
+	protected $baseFile = "myrecord.mp4";
+	protected $fileFormat = "MP4";
+	protected $fileVersionDelegateName ="com.wowza.wms.livestreamrecord.manager.StreamRecorderFileVersionDelegate";
+	protected $fileTemplate = "\${BaseFileName}_\${RecordingStartTime}_\${SegmentNumber}";
+	protected $segmentDuration = "900000";
+	protected $segmentSize = "10485760";
+	protected $segmentSchedule = "0 * * * * *";
+	protected $recordData = "true";
+	protected $startOnKeyFrame = "true";
+	protected $splitOnTcDiscontinuity = "false";
+	protected $option = "Version existing file";
+	protected $moveFirstVideoFrameToZero = "true";
+	protected $currentSize = "0";
+	protected $currentDuration = "0";
+	protected $recordingStartTime = "";
 
-	private $_skip = array();
-	private $_additional = array();
+        protected $_skip = array();
+	protected $_additional = array();
 
 	public function __construct(){
 		$this->restURI = $this->getHost()."/servers/".$this->getServerInstance()."/vhosts/_defaultVHost_/applications/live/instances/_definst_/streamrecorders";

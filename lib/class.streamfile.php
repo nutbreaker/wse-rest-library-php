@@ -8,15 +8,15 @@
 
 namespace com\wowza;
 class StreamFile extends Wowza{
-	private $restURI = "";
-	private $name = "";
+	protected $restURI = "";
+	protected $name = "";
 
 	// not included in json generated as indicated by _[varname]
-	private $_applicationName = "live";
-	private $_mediaCasterType = "rtp";
-	private $_applicationInstance = "_definst_";
-	private $_skip = array();
-	private $_additional = array();
+	protected $_applicationName = "live";
+	protected $_mediaCasterType = "rtp";
+	protected $_applicationInstance = "_definst_";
+	protected $_skip = array();
+	protected $_additional = array();
 
 
 	public function __construct($appName=null, $streamFileName=null,

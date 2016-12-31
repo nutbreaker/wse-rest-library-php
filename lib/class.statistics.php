@@ -8,7 +8,7 @@
 
 namespace com\wowza;
 class Statistics extends Wowza{
-	private $restURI = "";
+	protected $restURI = "";
 
 	public function __construct(){  }
 

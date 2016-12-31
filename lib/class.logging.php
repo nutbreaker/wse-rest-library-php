@@ -8,10 +8,10 @@
 
 namespace com\wowza;
 class Logging extends Wowza{
-	private $restURI = "";
+	protected $restURI = "";
 
-	private $_skip = array();
-	private $_additional = array();
+        protected $_skip = array();
+	protected $_additional = array();
 
 
 	public function __construct(){

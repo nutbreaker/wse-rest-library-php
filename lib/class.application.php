@@ -8,13 +8,13 @@
 
 namespace com\wowza;
 class Application extends Wowza{
-	private $restURI = "";
-	private $appType = "Live";
-	private $name = "";
-	private $clientStreamReadAccess = "*";
-	private $clientStreamWriteAccess = "*";
-	private $description = "";
-	private $_skip = array();
+	protected $restURI = "";
+	protected $appType = "Live";
+	protected $name = "";
+	protected $clientStreamReadAccess = "*";
+	protected $clientStreamWriteAccess = "*";
+	protected $description = "";
+	protected $_skip = array();
 
 	public function __construct($name="live",
 			$appType = "Live",

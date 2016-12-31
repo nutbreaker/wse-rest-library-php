@@ -8,11 +8,11 @@
 
 namespace com\wowza;
 class Server extends Wowza{
-	private $restURI = "";
+	protected $restURI = "";
 
 	// not included
-	private $_skip = array();
-	private $_additional = array();
+	protected $_skip = array();
+	protected $_additional = array();
 
 	public function __construct($host = "http://localhost:8087/v2",
 			$serverInstance = "_defaultServer_"

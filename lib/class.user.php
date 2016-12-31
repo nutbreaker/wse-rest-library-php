@@ -8,13 +8,13 @@
 
 namespace com\wowza;
 class User extends Wowza{
-	private $restURI = "";
-	private $userName = "";
-	private $password = "";
-	private $groups = array();
+	protected $restURI = "";
+	protected $userName = "";
+	protected $password = "";
+	protected $groups = array();
 
-	private $_skip = array();
-	private $_additional = array();
+	protected $_skip = array();
+	protected $_additional = array();
 
 
 	public function __construct($userName=null){

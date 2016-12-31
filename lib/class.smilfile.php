@@ -8,11 +8,11 @@
 
 namespace com\wowza;
 class SmilFile extends Wowza{
-	private $restURI = "";
-	private $smilStreams = array();
+        protected $restURI = "";
+	protected $smilStreams = array();
 
-	private $_skip = array();
-	private $_additional = array();
+	protected $_skip = array();
+	protected $_additional = array();
 
 
 	public function __construct($appName){

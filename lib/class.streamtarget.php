@@ -8,18 +8,18 @@
 
 namespace com\wowza;
 class StreamTarget extends Wowza{
-	private $restURI = "";
-	private $sourceStreamName= "myStream";
-	private $entryName= "ppsource";
-	private $profile= "rtmp";
-	private $host= "localhost";
-	private $application= "live";
-	private $userName= null;
-	private $password= null;
-	private $streamName= "myStream";
+	protected $restURI = "";
+	protected $sourceStreamName= "myStream";
+	protected $entryName= "ppsource";
+	protected $profile= "rtmp";
+	protected $host= "localhost";
+	protected $application= "live";
+	protected $userName= null;
+	protected $password= null;
+	protected $streamName= "myStream";
 
-	private $_skip = array();
-	private $_additional = array();
+	protected $_skip = array();
+	protected $_additional = array();
 
 
 	public function __construct($appName){

@@ -8,10 +8,10 @@
 
 namespace com\wowza;
 class DvrClipExtraction extends Wowza{
-	private $restURI = "";
+	protected $restURI = "";
 
-	private $_skip = array();
-	private $_additional = array();
+        protected $_skip = array();
+	protected $_additional = array();
 
 
 	public function __construct($appName, $appInstance="_definst_"){
