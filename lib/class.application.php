@@ -86,14 +86,9 @@ class Application extends Wowza{
 	protected function preparePropertiesForRequest(){
 		$classPropNames = get_class_vars(get_class($this));
 		$props = new \stdClass();
+                
 		foreach($classPropNames as $key=>$val){
-			if(isset($this->$key)){
-				if(preg_match("/^(\_)/", $key)){
-					continue;
-				}
-				if(isset($this->_skip[$key])){
-					continue;
-				}
+			if(isset($this->$key) && !preg_match("/^(\_)/", $key) && !isset($this->_skip[$key])){
 				$props->$key = $this->$key;
 			}
 		}

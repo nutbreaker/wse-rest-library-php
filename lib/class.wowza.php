@@ -118,10 +118,7 @@ class Wowza{
                 $props = new \stdClass();
 
                 foreach($classPropNames as $key=>$val){
-                        if(isset($this->$key)){
-                                if(preg_match("/^(\_)/", $key) || isset($this->_skip[$key])){
-                                        continue;
-                                }
+                        if(isset($this->$key) && !preg_match("/^(\_)/", $key) && !isset($this->_skip[$key])){
                                 $props->$key = $this->$key;
                         }
                 }
