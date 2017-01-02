@@ -31,7 +31,8 @@ abstract class Entity{
 	}
 
 	public function getEntityName(){
-		$className = array_pop(explode("\\",get_class($this)));
+		$className = (new \ReflectionClass($this))->getShortName();
+                
 		return lcfirst($className);
 	}
 
