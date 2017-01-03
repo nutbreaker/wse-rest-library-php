@@ -14,7 +14,7 @@ class DvrClipExtraction extends Wowza{
 	protected $_additional = array();
 
 
-	public function __construct($appName, $appInstance="_definst_"){
+	public function __construct($appName = "live", $appInstance = "_definst_"){
 		$this->restURI = $this->getHost()."/servers/".$this->getServerInstance()."/vhosts/".$this->getVHostInstance()."/applications/{$appName}/instances/{$appInstance}/dvrstores";
 	}
 

@@ -34,8 +34,8 @@ class Recording extends Wowza{
         protected $_skip = array();
 	protected $_additional = array();
 
-	public function __construct(){
-		$this->restURI = $this->getHost()."/servers/".$this->getServerInstance()."/vhosts/_defaultVHost_/applications/live/instances/_definst_/streamrecorders";
+	public function __construct($appName = "live", $appInstance = "_definst_"){
+                $this->restURI = $this->getHost()."/servers/".$this->getServerInstance()."/vhosts/_defaultVHost_/applications/{$appName}/instances/{$appInstance}/streamrecorders";
 	}
 
 	public function create($recordName, $instanceName, $recorderState, $defaultRecorder,

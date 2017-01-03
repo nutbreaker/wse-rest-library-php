@@ -10,24 +10,24 @@ namespace com\wowza;
 class Application extends Wowza{
 	protected $restURI = "";
 	protected $appType = "Live";
-	protected $name = "";
+	protected $appName = "";
 	protected $clientStreamReadAccess = "*";
 	protected $clientStreamWriteAccess = "*";
 	protected $description = "";
 	protected $_skip = array();
 
-	public function __construct($name="live",
+	public function __construct($appName="live",
 			$appType = "Live",
 			$clientStreamReadAccess = "*",
 			$clientStreamWriteAccess = "*",
 			$description = "*"
 	){
-		$this->name = $name;
+		$this->appName = $appName;
 		$this->appType = $appType;
 		$this->clientStreamReadAccess = $clientStreamReadAccess;
 		$this->clientStreamWriteAccess = $clientStreamWriteAccess;
 		$this->description = $description;
-		$this->restURI = $this->getHost()."/servers/".$this->getServerInstance()."/vhosts/".$this->getVHostInstance()."/applications/{$name}";
+		$this->restURI = $this->getHost()."/servers/".$this->getServerInstance()."/vhosts/".$this->getVHostInstance()."/applications/{$appName}";
 	}
 
 	public function get(){
