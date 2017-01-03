@@ -41,7 +41,7 @@ class Wowza{
 		for($i = 0; $i < count($args); $i ++) {
 			$arg = $args[$i];
 			if (! is_null ( $arg )) {
-				if (is_null ( $arg->restURI )) {
+				if (is_object($arg) && is_null ( $arg->restURI )) {
 					if(is_null($baseURI)){
 						unset($arg->restURI);
 					}
