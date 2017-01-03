@@ -44,6 +44,7 @@ class Recording extends Wowza{
 					$option, $moveFirstVideoFrameToZero, $currentSize, $currentDuration, $recordingStartTime
 	){
 
+                $this->restURI .="/{$recordName}";
 		$this->recordName = $recordName;
 		$this->instanceName = $instanceName;
 		$this->recorderState = $recorderState;
