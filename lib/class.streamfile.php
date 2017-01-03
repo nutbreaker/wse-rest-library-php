@@ -128,5 +128,51 @@ class StreamFile extends Wowza{
 		$this->restURI = $this->getHost()."/servers/".$this->getServerInstance()."/vhosts/".$this->getVHostInstance()."/applications/".$this->_applicationName."/instances/";
 		$this->restURI .= $this->_applicationInstance."/incomingstreams/".$this->name.".stream/actions/disconnectStream";
 		return $this->sendRequest($this->preparePropertiesForRequest(),array(), self::VERB_PUT);
-	}
+	}  
+        
+        //Setters and Getters
+        public function setApplicationName($applicationName){
+                $this->_applicationName = $applicationName;
+                
+                return $this;
+        }
+        public function getApplicationName(){
+                return $this->_applicationName;
+        }
+        
+        public function setMediaCasterType($mediaCasterType){
+                $this->_mediaCasterType = $mediaCasterType;
+                
+                return $this;
+        }
+        public function getMediaCasterType(){
+                return $this->_mediaCasterType;
+        }
+        
+        public function setApplicationInstance($applicationInstance){
+                $this->_applicationInstance = $applicationInstance;
+                
+                return $this;
+        }
+        public function getApplicationInstance(){
+                return $this->_applicationInstance;
+        }
+        
+        public function setSkip(array $skip){
+                $this->_skip = $skip;
+                
+                return $this;
+        }
+        public function getSkip(){
+                return $this->_skip;
+        }
+        
+        public function setAdditional(array $additional){
+                $this->_additional = $additional;
+                
+                return $this;
+        }
+        public function getAdditional(){
+                return $this->_additional;
+        }
 }
