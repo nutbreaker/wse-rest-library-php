@@ -46,9 +46,9 @@ class Recording extends Wowza{
 
 		$this->recordName = $recordName;
 		$this->instanceName = $instanceName;
-		$this->recordName = $recorderState;
-		$this->recordName = $defaultRecorder;
-		$this->recordName = $segmentationType;
+		$this->recorderState = $recorderState;
+		$this->defaultRecorder = $defaultRecorder;
+		$this->segmentationType = $segmentationType;
 		$this->outputPath = $outputPath;
 		$this->baseFile = $baseFile;
 		$this->fileFormat = $fileFormat;
